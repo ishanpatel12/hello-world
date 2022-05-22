@@ -39,11 +39,12 @@
                 <div *ngIf="weather">The min temp is..{{weather.main.temp_min}}</div>
           
     <button type = "submit" (click)= "onSubmit()" > Submit </button>
+    
+        <a href="info"> Info</a>
+    
+    
     <router-outlet></router-outlet>
-    <ul>
-        <li><a routerLink="house"> house-detail</a></li>
-    </ul>
-</div>
+  
 
 
 

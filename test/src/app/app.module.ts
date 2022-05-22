@@ -12,10 +12,12 @@ import { MatInputModule } from '@angular/material/input';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {APP_BASE_HREF} from '@angular/common';
+import { InfoComponent } from './info/info.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
