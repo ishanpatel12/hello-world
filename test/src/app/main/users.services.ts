@@ -11,8 +11,15 @@ export class UsersService{
    
 url = 'https://api.openweathermap.org/data/2.5/weather'
 apiKey = 'd00c28a64976141a9ae10d4553a8c04f'
+url_1='https://api.coindesk.com/v1/bpi/currentprice.json'
+
+
  constructor (private http:HttpClient) {}
- 
+ getPrice(price:number){
+     let params=new HttpParams()
+     .set('price',price)
+     return this.http.get(this.url_1, {params})
+ }
  getWeatherDataByState (zip:number){
     let params=new HttpParams()
     

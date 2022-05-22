@@ -22,7 +22,7 @@ export class MainComponent implements OnInit {
   ID=""
   weather:any;
   zip:any;
-  
+  cost:any;
 
   EmployeeName = new FormControl ('')
 
@@ -30,8 +30,15 @@ export class MainComponent implements OnInit {
 
    
   public localWaterMark: string = 'Select countries';
-  
- 
+  price:any;
+  getPrice(){
+
+    this.UsersService.getPrice(this.price).subscribe((data:any) =>{
+      this.cost=data
+      console.log (this.cost.rate)
+    })
+      
+  }
   getWeatherDataByState(){
     this.UsersService.getWeatherDataByState(this.zip).subscribe((data: any) =>{
       this.weather = data;
