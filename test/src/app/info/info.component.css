@@ -1,0 +1,39 @@
+
+#body{
+    border:8px solid;
+    height: 100%;
+    position: absolute;
+
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    text-shadow: 50%; 
+    align-items: center;
+    
+}
+
+#boxes{
+
+    border: 2px solid;
+    width: 50%;
+    right: 10%;
+    text-align: center;
+    margin-left: 25%;
+    
+}
+
+#city{
+    border: 2px solid;
+    
+}
+#state{
+    border: 2px solid;
+}
+#zip{
+    border: 2px solid;
+   
+}
+label{
+    display: inline-block;
+}

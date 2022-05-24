@@ -8,16 +8,19 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 })
 export class UsersService{
+   get(arg0: string) {
+     throw new Error('Method not implemented.');
+   }
    
 url = 'https://api.openweathermap.org/data/2.5/weather'
 apiKey = 'd00c28a64976141a9ae10d4553a8c04f'
-url_1='https://api.coindesk.com/v1/bpi/currentprice.json'
+url_1='https://api2.binance.com/api/v3/ticker/24hr'
 
 
  constructor (private http:HttpClient) {}
  getPrice(price:number){
      let params=new HttpParams()
-     .set('price',price)
+     .set('symbol',price)
      return this.http.get(this.url_1, {params})
  }
  getWeatherDataByState (zip:number){

@@ -31,11 +31,11 @@ export class MainComponent implements OnInit {
    
   public localWaterMark: string = 'Select countries';
   price:any;
-  getPrice(){
 
-    this.UsersService.getPrice(this.price).subscribe((data:any) =>{
-      this.cost=data
-      console.log (this.cost.rate)
+  getPrice(){
+    this.UsersService.getPrice(this.price) .subscribe((result:any) =>{
+      this.cost=result
+      console.log (this.cost.priceChange)
     })
       
   }
@@ -63,7 +63,10 @@ export class MainComponent implements OnInit {
 
    
   
-    
+          this.UsersService.getPrice(this.price) .subscribe((result:any) =>{
+            this.cost=result
+            console.log (this.cost.priceChange)
+          })
   
       }
 
